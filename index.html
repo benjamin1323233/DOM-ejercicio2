@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTcF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
@@ -33,9 +33,9 @@
     <main>
       <section class="container-fluid">
         <div class="row d-flex justify-content-center">
-          <h2>ingrese los siguientes datos para su perfil</h2>
+          <h2 id="hdosocultar">ingrese los siguientes datos para su perfil</h2>
           <article class="col-10 col-md-8 col-lg-8 mb-3">
-            <form>
+            <form id="miform">
               <div class="my-3">
                 <label for="Nombre" class="form-label">Nombre</label>
                 <input
@@ -43,7 +43,7 @@
                   class="form-control"
                   id="Nombre"
                   required
-                  minlength="5"
+                  minlength="1"
                   maxlength="50"
                   placeholder="Benito"
                 />
@@ -55,8 +55,8 @@
                   class="form-control"
                   id="edad"
                   required
-                  minlength="0"
-                  maxlength="110"
+                  min="0"
+                  max="110"
                   placeholder="ejemplo:18,21,etc"
                 />
               </div>
@@ -67,8 +67,8 @@
                   class="form-control"
                   id="dni"
                   required
-                  minlength="0"
-                  maxlength="9"
+                  minlength="8"
+                  maxlength="8"
                   placeholder="ejemplo:48482910"
                 />
               </div>
@@ -109,8 +109,8 @@
                   class="form-control"
                   id="nacimiento"
                   required
-                  minlength="1"
-                  maxlength="2025"
+                  min="1900"
+                  max="2025"
                   placeholder="ejemplo:1954"
                 />
               </div>
@@ -120,10 +120,12 @@
             </form>
           </article>
 
-          <article class=" col-md-8 col-lg-8 mb-3">
-            <h2>ingresa primero los datos antes de elegir una opcion</h2>
-            <button type="button" class="btn btn-warning botones">mostrar generacion</button>
-            <button type="button" class="btn btn-outline-warning btn-dark botones">Comprobar si eres mayor de edad</button>
+          <article class=" col-md-8 col-lg-8 mb-3 d-none" id="persona">
+            <h2 id="nombrePersona">Persona :</h2>
+            <button type="button" class="btn btn-warning botones" id="mostrarGeneracion">mostrar generacion</button>
+            <button type="button" class="btn btn-outline-warning btn-dark botones" id="mayorDeEdad">Comprobar si eres mayor de edad</button>
+            <ul class="list-group my-3" id="ultarea">
+            </ul>
         </article>
         </div>
       </section>
